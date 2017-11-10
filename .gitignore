@@ -3,5 +3,5 @@
 .bash_logout
 .bash_profile
 .bashrc
-.composer.lock
+composer.lock
 /cache/
