@@ -98,7 +98,7 @@ class Component_Settings_Model extends Prototype_Model {
 
             try {
                 $response = $this->app['twig']->render($component . '/' . $action . $this->twigExtension, array(
-                    'settings' => Component_Settings_Model::getInstance($app)->getAllSettings(),
+                    'settings' => $this->getAllSettings(),
                 ));
             } catch (\Exception $e) {
                 return $this->app->redirect('/home');
@@ -107,9 +107,4 @@ class Component_Settings_Model extends Prototype_Model {
             return $response;
         });
     }
-
-    public function instantiateTwig() {
-
-    }
-
 }
